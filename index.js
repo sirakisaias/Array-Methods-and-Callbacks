@@ -104,10 +104,8 @@ function getWinners(array, task2CB) {
     task2CB(array).forEach(function(element){
         if (element['Home Team Goals']>element['Away Team Goals']) {
             winners.push(element['Home Team Name']);
-           // return item['Home Team Name']
          } else if(element['Home Team Goals']<element['Away Team Goals']){
              winners.push(element['Away Team Name'])
-             //return item['Away Team Name']
          }
     })
    
@@ -131,7 +129,7 @@ function getWinnersByYear(array, task3CB, task4CB) {
     const year =task3CB(array, getFinals);
     const country = task4CB(array, getFinals);
 
-    const newEachWinner= year.forEach(function(item, index){
+    const newEachWinner= year.forEach(function(item){
         return `In ${year.item}, ${country.item} won the world cup!`
     })
     return newEachWinner;
