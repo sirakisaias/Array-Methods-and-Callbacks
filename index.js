@@ -43,7 +43,7 @@ const awayGoals = fifaData.filter(function(item){
 console.log('Task 1d',awayGoals)
 
 //(e) Winner of 2014 world cup final */
-const winner = fifaData.filter(function(item){
+const finalWinner = fifaData.filter(function(item){
     return item.Year === 2014 && item.Stage === 'Final'
 }).map(function(item){
     // return item['Home Team Name'];
@@ -53,7 +53,7 @@ const winner = fifaData.filter(function(item){
         return item['Away Team Name']
     }
 })
-console.log('Task 1e',winner)  //there should be another way to do this
+console.log('Task 1e',finalWinner)  //there should be another way to do this
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use getFinals to do the following:
@@ -63,9 +63,9 @@ Use getFinals to do the following:
 hint - you should be looking at the stage key inside of the objects
 */
 
-function getFinals(data) {
+function getFinals(array) {
    /* code here */
-   const finalTeams = data.filter(function(item){
+   const finalTeams = array.filter(function(item){
     return item.Stage ==='Final';
    })
    return finalTeams;
